@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        
+    </head>
+    <body>
+           private variable <br />
+
+        <script >
+            
+            function factory_movie(title){
+                return {        // 객체를 리턴
+                    get_title : function(){ // 매소드
+                        return title;
+                    },
+                    set_title : function(_title){
+                        if(typeof _title === 'String'){
+                            title = _title;
+                        } else{
+                            alert('제목은 문자열이어야 합니다.');
+                        }
+
+                    }
+                }
+            }
+
+            ghost = factory_movie('Ghost in the shell');
+            matrix = factory_movie('Matrix');
+            alert(ghost.get_title());
+            alert(matrix.get_title());
+            ghost.set_title('공각기공대');
+            
+            alert(ghost.get_title());
+            alert(matrix.get_title());
+
+        </script>
+    </body>
+</html>

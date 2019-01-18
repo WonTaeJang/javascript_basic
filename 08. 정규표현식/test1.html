@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        
+    </head>
+    <body>
+            Hello world <br />
+
+        <script >
+            // 정규표현식 : 추출, test, 치환
+            var pattern = 'a';
+            var pattern = /a/;  // var pattern = new RegExp('a');   // 정규표현식 객체
+            pattern.exec('abcde');      // ["a"]
+            
+            pattern = /a./;
+            pattern.exec('abcde');      // ["ab"]
+
+            pattern = /a/;
+            pattern.exec('bcdef');      // null
+
+            pattern.test('abcde');      // true
+            pattern.test('bcde');       // false
+
+
+
+        </script>
+    </body>
+</html>

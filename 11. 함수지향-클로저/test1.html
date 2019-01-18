@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        
+    </head>
+    <body>
+            내부함수, 외부함수 <br />
+
+        <script >
+            // 내부함수
+            function outter(){
+
+                var title = 'coding everybody';
+                function inner(){   // 위에 title을 사용할 수 있다.
+                    alert(title)
+                }
+
+                inner();
+            }
+
+            outter();
+
+
+
+        </script>
+    </body>
+</html>

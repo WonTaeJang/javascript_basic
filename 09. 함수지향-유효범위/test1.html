@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        
+    </head>
+    <body>
+            Hello world <br />
+
+        <script >
+            var vscope = "global";
+
+            function fscope(){
+                var vscope = 'local';
+                alert(vscope);
+            }
+
+            fscope();
+
+
+
+        </script>
+    </body>
+</html>

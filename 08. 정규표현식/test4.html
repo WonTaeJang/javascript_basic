@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        
+    </head>
+    <body>
+            Hello world <br />
+
+        <script >
+           var pattern = /(\w+)\s(\w+)/;    // 문자_문자 ex> coding everybody
+            // \w   : A~Z a~z 0~9 
+            // +    : 하나 이상 (a가 2개있어도 됨)
+            // \s   : 공백
+
+            var str = "coding everybody";
+            var result = str.replace(pattern, '$2, $1');
+
+            console.log(result);
+
+        </script>
+    </body>
+</html>

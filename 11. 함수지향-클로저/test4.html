@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        
+    </head>
+    <body>
+           클로저의 응용 <br />
+
+        <script >
+            
+            var arr = []
+            for(var i = 0; i < 5; i++){
+                arr[i] = function(){
+                    return i;
+                }
+            }
+            for(var index in arr) {
+                console.log(arr[index]());
+            }
+
+
+            var arr = [];
+            for(var i = 0; i < 5; i++)
+            {
+                arr[i] = function(id){  // 2. 외부함수에 접근할수 있기때문에
+                    return function(){  // 3.
+                        return id;      // 1. 내부함수의 지역변수가
+                    }
+                }(i);
+            }
+
+            for(var index in arr){
+                    console.log(arr[index]());  // arr[index]() 이렇게 하면 함수가 호출된다 (3.)
+            }
+
+        </script>
+    </body>
+</html>
