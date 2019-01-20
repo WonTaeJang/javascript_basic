@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        
+    </head>
+    <body>
+            매개변수의 수 - function length <br />
+
+        <script type = "text/javascript">
+            function zero(){
+                console.log(
+                    'zero.length', zero.length,
+                    'arguments', arguments.length
+                );
+            }
+            function one(arg1){
+                console.log(
+                    'one.length', one.length,       // 매개변수의 숫자 (1)
+                    'arguments', arguments.length   // 인자가 몇개를 받았는가 (2)
+                );
+            }
+            function two(arg1, arg2){
+                console.log(
+                    'two.length', two.length,
+                    'arguments', arguments.length
+                );
+            }
+            zero(); // zero.length 0 arguments 0 
+            one('val1', 'val2');  // one.length 1 arguments 2 
+            two('val1');  // two.length 2 arguments 1
+
+
+        </script>
+    </body>
+</html>

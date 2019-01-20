@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        
+    </head>
+    <body>
+            arguments <br />
+
+        <script >
+            // function a(args){}   // args: 매개변수, parameter
+            // a(1) // 1: 인자
+
+            function sum(){
+                var i, _sum = 0;
+                for(i = 0; i < arguments.length; i++){
+                    document.write(i + ' : ' + arguments[i] + '<br />');
+                    _sum += arguments[i];
+
+                }
+                return _sum;
+            }
+
+            document.write('result : ' + sum(1,2,3,4)); // 자바 스크립트는 관대해서 매개변수랑 인자가 같지않아도 에러가 발생하지는 않는다.
+
+
+
+        </script>
+    </body>
+</html>
