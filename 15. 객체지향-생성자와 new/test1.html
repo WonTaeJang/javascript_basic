@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        
+    </head>
+    <body>
+            자바스크립트의 객체지향 <br />
+
+        <script type = "text/javascript">
+             var person = {};       // object를 만드는 방법
+             person.name = 'egoing';
+             person.introduce = function(){
+                 return 'My name is ' + this.name + '<br />';
+             }
+
+             document.write(person.introduce());
+
+            var person = {
+                'name' : 'egoing2',
+                'introduce' : function(){
+                    return 'My name is ' + this.name;
+                }
+            }
+
+            document.write(person.introduce());
+
+        </script>
+    </body>
+</html>
