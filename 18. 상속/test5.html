@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        
+    </head>
+    <body>
+            prototype chain <br />
+
+        <script type = "text/javascript">
+            // prototype : 원형, 상속이라는 개념을 제공
+            function  Ultra(){}
+            Ultra.prototype.ultraProp = true;
+
+            function Super(){}
+            Super.prototype = new Ultra();
+
+            function Sub(){}
+            Sub.prototype = new Super();
+            var s = new Supper();
+            s.ultraProp = 3;
+            Sub.prototype = s;
+            
+            //sub.prototype.ultraProp = 2;
+
+            var o = new Sub();
+            //o.ultraProp = 1;
+            console.log(o.ultraProp);
+
+        </script>
+    </body>
+</html>
